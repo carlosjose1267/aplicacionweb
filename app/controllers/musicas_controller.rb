@@ -1,4 +1,5 @@
 class MusicasController < ApplicationController
+  before_action :authenticate_user!, except: %i[ index show ]
   before_action :set_musica, only: %i[ show edit update destroy ]
 
   # GET /musicas or /musicas.json
