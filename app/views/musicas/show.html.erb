@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @musica %>
+<%= link_to 'Descargar musica', @musica.file %>
+
+  <%= link_to "Edit this musica", edit_musica_path(@musica) %> |
+  <%= link_to "Back to musicas", musicas_path %>
+ <p style="color: green">La musica se descargara automaticamente al pulsar descargar</p> 
+<div class="float-sm-start">
+  <%= button_to "Eliminar musica", @musica, class: 'btn btn-danger', method: :delete %>
+</div>
