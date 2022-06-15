@@ -19,16 +19,16 @@
     <%= alert %>
 <div id="mainWrapper">
   <header>
-      <!-- Condicional del registro -->
-<div id="logo"> <img src="logomusica.png" width="120" height="60" alt="Logo"></div>
- <div id="headerLinks">
-  
+
+<div id="headerLinks">
+<div id="logo"> <img src="/logomusica.png" width="120" height="60"></div>
+ <!-- Condicional del registro -->
     <% if current_user %> Bienvenido, 
     <%= current_user.usuario %> 
     <%= button_to "Cerrar sesion", destroy_user_session_path, method: :delete, data: { turbo: false }, class: 'btn btn-danger' %>
-
     <% end %>
-     </div>
+    </div>
   </header>
+
     <%= yield %>
     <br>&nbsp; &nbsp;
