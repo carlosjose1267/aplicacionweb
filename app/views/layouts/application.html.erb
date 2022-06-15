@@ -18,22 +18,17 @@
     <%= notice %>
     <%= alert %>
 <div id="mainWrapper">
-    <% if current_user %>
-    <%= current_user.usuario %>
-    <%= button_to "Cerrar sesion", destroy_user_session_path, method: :delete, data: { turbo: false } %>
+  <header>
+      <!-- Condicional del registro -->
+<div id="logo"> <img src="logomusica.png" width="120" height="60" alt="Logo"></div>
+ <div id="headerLinks">
+  
+    <% if current_user %> Bienvenido, 
+    <%= current_user.usuario %> 
+    <%= button_to "Cerrar sesion", destroy_user_session_path, method: :delete, data: { turbo: false }, class: 'btn btn-danger' %>
+
     <% end %>
+     </div>
+  </header>
     <%= yield %>
     <br>&nbsp; &nbsp;
-
-    <footer>
-    <!-- Pie de pagina -->
-    <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius sem neque. Integer ornare.</p>
-    </div>
-    <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius sem neque. Integer ornare.</p>
-    </div>
-    <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius sem neque. Integer ornare.</p>
-    </div>
-  </footer>

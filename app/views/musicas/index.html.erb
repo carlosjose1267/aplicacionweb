@@ -1,15 +1,7 @@
 <!-- <p style="color: green"><%= notice %></p> -->
 <script src="https://www.paypal.com/sdk/js?client-id=AT3sCq_151stlAqShcSHr5o4ySQdYQxKuaQddHxSSevisfFjVjKzc6NJ1vED-wJ5BHwmmkqY34ezwJw2&currency=EUR&disable-funding=credit,card,sofort"></script>
-<header>
-      <!-- Condicional del registro -->
-<div id="logo"> <img src="" alt="Logo"></div>
-    <div id="headerLinks">
-    </div>
-  </header>
-  <section id="offer">
-    <h2>MUSICA DE CALIDAD</h2>
-    <p>Escucha todo tipo de musicas</p>
-  </section>
+
+  
   <div id="content">
     <section class="sidebar">
       <div id="menubar">
@@ -18,9 +10,11 @@
           <hr>
           <ul>
             <!-- Lista de HERRAMIENTAS -->
-            <li><a href="https://github.com/carlosjose1267/aplicacionweb" title="Github" target="_blank">Enlace Github</a></li>
-            <li>
-              <a>Comprar Reproductor MP3</a>
+            <li><a href="https://github.com/carlosjose1267/aplicacionweb" title="Github" target="_blank">Enlace a Github APP</a></li>
+          
+            <li><a href="https://github.com/carlosjose1267/aplicacionjavamp3/tree/master" title="Github" target="_blank">Enlace a Github MP3</a><hr></li>
+              <!-- Comprar con paypal-->
+              Comprar MP3 Paypal
               <script>
       paypal.Buttons({
         createOrder: (data, actions) => {
@@ -42,7 +36,7 @@
         }
       }).render('.menu');
     </script>
-            </li>
+           
           </ul>
         </nav>
 
