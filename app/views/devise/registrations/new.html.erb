@@ -1,26 +1,26 @@
-<h2>Crear una cuenta</h2>
+<h2>Create una cuenta</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :Correo_electronico %><br />
     <%= f.email_field :email, placeholder: "Correo electronico", autofocus: true, autocomplete: "email" %>
   </div>
-
+<p></p>
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :Contraseña %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> caracteres como minimo)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, placeholder: "Inserta una contraseña", autocomplete: "new-password" %>
   </div>
- 
+ <p></p>
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.label :Confirmar_contraseña %><br />
+    <%= f.password_field :password_confirmation, placeholder: "Inserta de nuevo la contraseña", autocomplete: "new-password" %>
   </div>
-
+<p></p>
   <div class="actions">
     <%= f.submit "Crear cuenta", class: 'btn btn-primary' %>
   </div>
